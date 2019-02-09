@@ -66,3 +66,37 @@ function WriteMessage(message: Message){
     console.log(message);
 }
 
+// Modules y namespace
+
+//          creamos un modulo con dos clases exportables
+namespace Validator{
+    export interface NumberValidator{
+        // validador que devuelve un booleano
+        isValidNumber(value:number): boolean
+    }
+
+    export class ZipCodeValidator implements NumberValidator{
+        isValidNumber(value: number): boolean{
+            return value > 0 && 10 < value;
+        }
+    }
+}
+
+let validador: Validator.NumberValidator = new Validator.ZipCodeValidator;
+
+validador.isValidNumber(5);
+
+// Decoradores
+
+function Logged(){
+    return function (target: any){
+        console.log('Logged!');
+    }
+}
+
+@Logged()    //       hay que modifiar el archivo tsconfig.json y descomentar la linea:     "experimentalDecorators": true, 
+class TestDecorator{
+    method(): boolean{
+        return true;
+    }
+}
