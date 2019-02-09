@@ -115,3 +115,24 @@ abstract class People {
 
 }
 
+class Developer extends People {
+
+}
+
+let personDeveloper = new Developer('Samuel');
+
+// condicionales
+
+if(personDeveloper.name === 'Samuel'){
+    console.log('Developer found!');
+}
+
+switch (person.skinColor){
+    case Color.Pink:
+        console.log('blue');
+        break;
+    default:
+        console.log('no color found!');
+        break;
+}
+

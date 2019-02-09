@@ -91,3 +91,23 @@ var People = /** @class */ (function () {
     }
     return People;
 }());
+var Developer = /** @class */ (function (_super) {
+    __extends(Developer, _super);
+    function Developer() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return Developer;
+}(People));
+var personDeveloper = new Developer('Samuel');
+// condicionales
+if (personDeveloper.name === 'Samuel') {
+    console.log('Developer found!');
+}
+switch (person.skinColor) {
+    case Color.Pink:
+        console.log('blue');
+        break;
+    default:
+        console.log('no color found!');
+        break;
+}
