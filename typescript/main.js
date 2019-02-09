@@ -1,4 +1,17 @@
 "use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 maxValue(3, 9);
 function maxValue(value1, value2) {
     return Math.max(value1, value2);
@@ -42,3 +55,39 @@ function alertUser() {
 var u = null;
 // undefined
 var ud = undefined;
+// clases
+var Person = /** @class */ (function () {
+    function Person(name, age, skinColor) {
+        this.name = name;
+        this.age = age;
+        this.skinColor = skinColor;
+    }
+    //métodos
+    // método para saludar
+    Person.prototype.greet = function () {
+        return "Hello, " + name;
+    };
+    return Person;
+}());
+var person = new Person('Juan', 30, Color.Blue);
+person.name;
+person.skinColor = Color.Pink;
+alert(person.greet());
+// herencia
+var Guy = /** @class */ (function (_super) {
+    __extends(Guy, _super);
+    function Guy() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Guy.prototype.greet = function () {
+        return "My favorite color is " + this.skinColor;
+    };
+    return Guy;
+}(Person));
+// clases abstractas  (no se pueden instanciar)
+var People = /** @class */ (function () {
+    function People(name) {
+        this.name = name;
+    }
+    return People;
+}());

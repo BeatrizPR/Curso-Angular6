@@ -63,3 +63,55 @@ let u:null = null;
 // undefined
 
 let ud: undefined = undefined;
+
+// clases
+
+class Person {
+
+    // clases de distintos tipos:
+
+    readonly name: string;
+    private age: number;
+    public skinColor: Color;
+    
+    constructor (name: string, age: number, skinColor: Color){
+        this.name = name;
+        this.age = age;
+        this.skinColor = skinColor;
+    }
+
+    //métodos
+
+    // método para saludar
+    greet(): string{
+        return `Hello, ${name}`;
+    }
+
+}
+
+let person = new Person('Juan', 30, Color.Blue);
+
+person.name;
+person.skinColor = Color.Pink;
+
+alert(person.greet());
+
+// herencia
+
+class Guy extends Person{
+    greet(): string{
+        return `My favorite color is ${this.skinColor}`;
+    }
+}
+
+// clases abstractas  (no se pueden instanciar)
+
+abstract class People {
+    readonly name: string;
+
+    constructor(name: string){
+        this.name = name;
+    }
+
+}
+
