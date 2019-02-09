@@ -34,3 +34,11 @@ Color.Blue;
 var notSure = '298';
 notSure = 80;
 notSure = true;
+// Void
+function alertUser() {
+    alert('Alert with function void');
+}
+// Null
+var u = null;
+// undefined
+var ud = undefined;

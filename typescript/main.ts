@@ -50,3 +50,16 @@ let notSure: any = '298';
 notSure = 80;
 notSure = true;
 
+// Void
+
+function alertUser(): void {
+    alert('Alert with function void');
+}
+
+// Null
+
+let u:null = null;
+
+// undefined
+
+let ud: undefined = undefined;
