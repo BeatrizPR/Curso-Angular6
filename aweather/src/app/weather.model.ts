@@ -1,4 +1,5 @@
-export class Weather{
+import { Forecast } from './forecast.model';
+export class Weather {
     city: string;
     date: string;
     temperature: number;
@@ -11,6 +12,8 @@ export class Weather{
     mintemperature: number;
     sunrise: string;
     sunset: string;
+
+    forecast: Forecast;
 
     // porcentaje hasta que se oculte el sol
     get percentToSunset(): number {
